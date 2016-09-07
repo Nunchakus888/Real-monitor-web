@@ -1,0 +1,37 @@
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+        <span class="navbar-brand" href="#">Monitor</span>
+    </div>
+    <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-right" ng-cloak>
+            <li><a href="#" class="ng-cloak">{{input_username}}</a></li>
+            <li><a href="#" class="ng-cloak" ng-click="logout()">注销</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div ng-controller="tableController">
+    <div>
+        <p class="ss-text-lg ss-text-danger ss-text-center">Realtime API Operation</p>
+        <div class="grid" ui-grid="monitorTable.gridOptions" ui-grid-selection ui-grid-pagination
+             my-ui-grid-auto-resize></div>
+    </div>
+    <div>
+        <div class="">
+            <highchart id="apiOperationDetail" config="apiOperationChart"></highchart>
+            <ul class="pager">
+                <li><button class="ss-btn-info ss-btn-lg" type="button" ng-click="clickToGetApiByDifferentTakeTime(-100)" ng-disabled="!currentSelectionRow">-100</button></li>
+                <li><span class="ss-text-secondary" ng-click="changeShow()">{{'查询耗时>' + queryApiByTakeTime + 'ms的操作记录'}}</span></li>
+                <li><button class="ss-btn-info ss-btn-lg" type="button" ng-click="clickToGetApiByDifferentTakeTime(300)" ng-disabled="!currentSelectionRow">+300</button></li>
+            </ul>
+        </div>
+    </div>
+
+    <div>
+        <p></p>
+        <p class="ss-text-lg ss-text-danger ss-text-center">heartbeat</p>
+        <div class="grid" ui-grid="heartbeatData.gridOptions" ui-grid-selection ui-grid-pagination
+             my-ui-grid-auto-resize></div>
+    </div>
+</div>
+

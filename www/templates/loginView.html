@@ -1,0 +1,19 @@
+
+<form class="api_login">
+    <h2>Login</h2>
+    <div class="login-inform">
+        <p>
+            <label>用&nbsp户&nbsp名&nbsp:&nbsp</label>
+            <input type="text" required placeholder="Username" ng-model="input_username">
+        </p>
+        <p>
+            <label>密&nbsp&nbsp&nbsp&nbsp&nbsp码&nbsp:&nbsp</label>
+            <input type="password" required placeholder="Password" ng-model="input_password">
+        </p>
+    </div>
+
+    <label class="login_checked">
+        <input type="checkbox" class="ss-checkbox-directive" ng-model="propA" ss-label="记住密码" />
+    </label>
+    <button type="submit" class="ss-btn-lg ss-btn-info" ng-disabled="!input_username || !input_password" ng-click="login(input_username, input_password)">登录</button>
+</form>

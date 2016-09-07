@@ -1,0 +1,615 @@
+/********************************************************************************
+class: basecss.Background
+********************************************************************************/
+
+.ss_bg_primary {
+    /*background: #161819;*/
+    background: #161819;
+}
+
+.ss_bg_secondary {
+    background: #232628;
+}
+
+.ss_bg_extra {
+    background: #333739;
+}
+/********************************************************************************
+class: basecss.Button
+********************************************************************************/
+.ss-btn {
+    height: 24px;
+    width: 70px;
+    border: none;
+    border-radius:2px;
+    font-family:MicrosoftYaHei;
+    font-size:14px;
+    line-height:14px;
+    text-align: center;
+}
+
+.ss-btn-sm {
+    height:20px;
+    width:40px;
+    border: none;
+    border-radius:2px;
+    font-family:fantasy;
+    font-size:12px;
+    line-height:12px;
+    text-align: center;
+}
+
+.ss-btn-lg {
+    height:30px;
+    width:100px;
+    border: none;
+    border-radius:2px;
+    font-family:MicrosoftYaHei;
+    font-size:14px;
+    line-height:14px;
+    text-align: center;
+}
+
+.ss-btn-info {
+    background: #0d7b7b;
+    color:#ffebc8;
+}
+
+.ss-btn-info:hover,
+.ss-btn-info.hover {
+    background: #179595;
+}
+
+.ss-btn-info:active,
+.ss-btn-info.active {
+    background: #0d6060;
+}
+
+.ss-btn-danger {
+    color:#ffebc8;
+    background: #c03647;
+}
+
+.ss-btn-danger:hover,
+.ss-btn-danger.hover {
+    background: #d23044;
+}
+
+.ss-btn-danger:active,
+.ss-btn-danger.active {
+    background: #a7172a;
+}
+
+.ss-btn-warning {
+    color:#1b1b1b;
+    background: #f38b1e;
+}
+
+.ss-btn-warning:hover,
+.ss-btn-warning.hover {
+    background: #ffa13e;
+}
+
+
+.ss-btn-warning:active,
+.ss-btn-warning.active {
+    color:#000000;
+    background: #b47010;
+}
+
+.ss-btn.disabled,
+.ss-btn[disabled],
+.ss-btn-lg[disabled],
+.ss-btn-sm[disabled] {
+    color:#7b8082;
+    background: #35393b;
+}
+
+.ss-btn-gray {
+    background: #4b4d50;
+    color:#fff9ee;
+}
+
+.ss-btn-gray:hover,
+.ss-btn-gray.hover {
+    background: #6d7075;
+}
+
+.ss-btn-gray:active,
+.ss-btn-gray.active {
+    background: #0d6060;
+    color:#ffebc8;
+}
+/********************************************************************************
+class: simpledirective.inputs.checkbox
+********************************************************************************/
+
+.ss-input-control {
+    display: inline-block;
+    color: #ffebc8;
+    font-size: .7292rem;
+    line-height: .7292rem;
+    text-align: left;
+    cursor: default;
+}
+
+    .ss-input-control.ss-checkbox > input[type=checkbox] {
+        display: none;
+    }
+
+    .ss-input-control.ss-checkbox > .check {
+        display: inline-block;
+    }
+
+    .ss-input-control.ss-checkbox:hover > .check {
+        background-color: #0d7b7b;
+    }
+
+        .ss-input-control.ss-checkbox:hover > .check[disabled] {
+            background-color: transparent;
+        }
+
+    .ss-input-control.ss-checkbox > input[type=checkbox],
+    .ss-input-control.ss-checkbox > .check,
+    .ss-input-control.ss-checkbox > .caption {
+        vertical-align: middle;
+    }
+
+/********************************************************************************
+class: basecss.Button
+updated on 2016/08/24 By Wei Lai
+********************************************************************************/
+
+.ss-icon {
+    /*display: block;*/
+    border-radius: 2px;
+    background-image: url("./image/icons.png");
+    background-repeat: no-repeat;
+}
+.ss-icon[disabled] {
+    cursor: no-drop;
+    opacity: 0.5;
+}
+.ss-icon:hover {
+    opacity: 0.7;
+}
+.ss-icon:active {
+    opacity: 1;
+}
+.ss-icon-primary {
+    background-color: #0d7b7b;
+}
+
+.ss-icon-primary.ss-icon-checkbox-unselected,
+.ss-icon-primary.ss-icon-radiobutton-selected,
+.ss-icon-primary.ss-icon-radiobutton-unselected {
+    background-color: transparent;
+}
+
+/* 生成css */
+.ss-icon-checkbox-selected {
+    width: 16px;
+    height: 16px;
+    background-position: -5px -5px;
+}
+
+.ss-icon-checkbox-unselected {
+    width: 16px;
+    height: 16px;
+    background-position: -31px -5px;
+}
+
+.ss-icon-contact-info {
+    width: 20px;
+    height: 20px;
+    background-position: -57px -5px;
+}
+
+.ss-icon-add {
+    width: 20px;
+    height: 20px;
+    background-position: -87px -5px;
+}
+
+.ss-icon-ban {
+    width: 20px;
+    height: 20px;
+    background-position: -117px -5px;
+}
+
+.ss-icon-cancel-top {
+    width: 20px;
+    height: 20px;
+    background-position: -5px -35px;
+}
+
+.ss-icon-close {
+    width: 20px;
+    height: 20px;
+    background-position: -35px -35px;
+}
+
+.ss-icon-concern {
+    width: 20px;
+    height: 20px;
+    background-position: -65px -35px;
+}
+
+.ss-icon-delete {
+    width: 20px;
+    height: 20px;
+    background-position: -94px -35px;
+}
+
+.ss-icon-download-noraml {
+    width: 20px;
+    height: 20px;
+    background-position: -125px -35px;
+}
+
+.ss-icon-edit {
+    width: 20px;
+    height: 20px;
+    background-position: -5px -65px;
+}
+
+.ss-icon-enlarge {
+    width: 20px;
+    height: 20px;
+    background-position: -35px -65px;
+}
+
+.ss-icon-maximize {
+    width: 20px;
+    height: 20px;
+    background-position: -65px -65px;
+}
+
+.ss-icon-narrow {
+    width: 20px;
+    height: 20px;
+    background-position: -95px -65px;
+}
+
+.ss-icon-popup {
+    width: 20px;
+    height: 20px;
+    background-position: -125px -65px;
+}
+
+.ss-icon-restore {
+    width: 20px;
+    height: 20px;
+    background-position: -5px -95px;
+}
+
+.ss-icon-search-location {
+    width: 20px;
+    height: 20px;
+    background-position: -35px -95px;
+}
+
+.ss-icon-search-location-copy {
+    width: 20px;
+    height: 20px;
+    background-position: -65px -95px;
+}
+
+.ss-icon-search {
+    width: 20px;
+    height: 20px;
+    background-position: -95px -95px;
+}
+
+.ss-icon-tanru {
+    width: 20px;
+    height: 20px;
+    background-position: -125px -95px;
+}
+
+.ss-icon-window-top {
+    width: 20px;
+    height: 20px;
+    background-position: -5px -125px;
+}
+
+.ss-icon-radiobutton-selected {
+    width: 16px;
+    height: 16px;
+    background-position: -35px -125px;
+}
+
+.ss-icon-radiobutton-unselected {
+    width: 16px;
+    height: 16px;
+    background-position: -61px -125px;
+    background-color: transparent;
+}
+
+.ss-icon-radiobutton-unselected-disabled {
+    width: 16px;
+    height: 16px;
+    background-position: -87px -125px;
+}
+
+.ss-icon-window-downsize {
+    width: 20px;
+    height: 20px;
+    background-position: -113px -125px;
+}
+
+.ss-icon-window-minimize {
+    width: 20px;
+    height: 20px;
+    background-position: -147px -5px;
+}
+/********************************************************************************
+class: basecss.Button
+********************************************************************************/
+
+
+.ss-label {
+	display: inline-block;
+	max-width: 100%;
+	margin-bottom: 5px;
+	font-family:MicrosoftYaHei;
+	font-size:14px;
+	color:#7b8082;
+	line-height:14px;
+	text-align:left;
+}
+
+
+/********************************************************************************
+class: basecss.List
+********************************************************************************/
+
+.ss-list-group {
+    font-size: 14px;
+    color: #ffda91;
+    padding: 0px;
+
+}
+
+.ss-list-item {
+    list-style: none;
+    line-height: 24px;
+    padding: 3px 10px;
+}
+.ss-list-item:hover {
+    background-color: #1d4243!important;
+}
+.ss-list-group.ss-back-style .ss-list-item:nth-child(odd) {
+    background-color: #191b1c;
+}
+.ss-list-group.ss-back-style .ss-list-item:nth-child(even) {
+    background-color: #232628;
+}
+/********************************************************************************
+class: basecss.Panel
+********************************************************************************/
+.ss-panel {
+
+}
+.ss-panel-head {
+    font-size:14px;
+    color:#ffebc8;
+    line-height:14px;
+    text-align:left;
+    padding: 10px 15px;
+    background-color: #1d595b;
+    border-bottom: 1px solid transparent;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px
+}
+.ss-panel-body {
+    background-color: #161819;
+    padding: 10px;
+}
+/********************************************************************************
+class: simpledirective.inputs.radiobutton
+********************************************************************************/
+
+.ss-input-control .ss-radiobutton > input[type=radio] {
+    display: none;
+}
+
+.ss-input-control .ss-radiobutton > .check {
+    display: inline-block;
+    -ms-border-radius: 100%;
+    border-radius: 100%;
+}
+
+.ss-input-control .ss-radiobutton:hover > .check {
+    background-color: #0d7b7b;
+}
+
+    .ss-input-control .ss-radiobutton > .check[disabled] {
+        background-color: transparent;
+    }
+
+.ss-input-control .ss-radiobutton > input[type=radio],
+.ss-input-control .ss-radiobutton > .check,
+.ss-input-control .ss-radiobutton > .caption {
+    vertical-align: middle;
+}
+
+/********************************************************************************
+class: basecss.Table
+********************************************************************************/
+.ss-table {
+    background-color: #161819;
+    font-family: 'Microsoft YaHei Regular';
+
+}
+.ss-table-head {
+    font-size:14px;
+}
+.ss-table-head tr{
+    height: 40px;background-color:#232628;
+}
+.ss-table-head tr td{
+    padding:0px 30px;font-size:14px;text-align: center;color:#7B8082;line-height: 40px;
+ }
+.ss-table-body tr:nth-child(even){
+    background-color: #232628;
+}
+.ss-table-body tr:nth-child(odd){
+    background-color: #191B1C;
+}
+.ss-table-body tr:hover{
+    background-color: #1d4243;
+}
+.ss-table-body tr td{
+    height: 30px;line-height: 30px;color:#ffebc8;text-align: center;
+}
+.ss-table-body .ss-table-special{
+    color:#ffda9a;
+}
+.ss-table-body tr.ss-table-rise{
+    line-height: 40px;height: 40px;
+}
+.ss-table-body tr.ss-table-selected{
+    background-color: #0d7b7b !important;
+}
+/********************************************************************************
+class: basecss.Text
+********************************************************************************/
+
+input, textarea, keygen, select, button,
+.body-font-family {
+    font-family: MicrosoftYaHei;
+}
+
+.ss-text-primary {
+    color: #ffda9a;
+}
+
+.ss-text-secondary {
+    color: #ffebc8;
+}
+
+.ss-text-extra {
+    color: #7b8082;
+}
+
+.ss-text-lg {
+    line-height: 18px;
+    font-size: 18px;
+}
+
+.ss-text-sm {
+    line-height: 14px;
+    font-size: 14px;
+}
+
+.ss-text-xs {
+    line-height: 12px;
+    font-size: 12px;
+}
+
+.ss-text-warning {
+    color: #fe900d;
+}
+
+.ss-text-danger {
+    color: #ff3b54;
+}
+
+.ss-text-info {
+    color: #38caca;
+}
+
+.ss-text-disabled {
+    color: #535353;
+}
+
+a.ss-primary {
+    text-decoration: none;
+    color: #43adff;
+}
+
+    a.ss-primary:hover {
+        color: #79c3ff;
+    }
+
+    a.ss-primary:focus {
+        color: #1781D3;
+    }
+
+    a.ss-primary[disabled] {
+        text-decoration: none;
+        color: #535353;
+    }
+
+a.ss-extra {
+    text-decoration: none;
+    color: #ffebc8;
+}
+
+    a.ss-extra:hover {
+        color: #ffda9a;
+    }
+
+    a.ss-extra:focus {
+        text-decoration: none;
+        color: #d69b34;
+    }
+
+    a.ss-extra[disabled] {
+        text-decoration: none;
+        color: #535353;
+    }
+
+/* add space between text and underline of an <A> element */
+a.ss-text-underline {
+    text-decoration: none;
+    position: relative;
+}
+
+    a.ss-text-underline:after {
+        content: '';
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        border-width: 0 0 1px;
+        border-style: solid;
+    }
+/*end space between text and underline of an <A> element*/
+
+/********************************************************************************
+class: basecss.input.text
+********************************************************************************/
+.ss-input-text {
+    background: #3b4145;
+    border: 1px solid transparent;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+    padding: 0 3px;
+
+    color: #fff3dd;
+}
+
+.ss-input-text-sm {
+    height: 24px;
+}
+
+.ss-input-text-lg {
+    height: 30px;
+}
+
+.ss-input-text:hover {
+    background: #42494e;
+    border-color: #697277;
+}
+
+.ss-input-text:focus {
+    background: #161819;
+    border: 1px solid #0d7b7b;
+    outline:  1px solid transparent;
+}
+
+.ss-input-text[disabled] {
+    background: #2b2e2f;
+}

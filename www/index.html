@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Admin</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/static/lib/angular-ui-grid/ui-grid.css" rel="stylesheet">
+    <link href="/static/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/css/avalon-ui.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+    <style>
+        body > div {
+            margin-left: 15px;
+            margin-right: 15px;
+            /*padding-top: 5px;*/
+        }
+        body > div >div {
+            padding-top: 5px;
+        }
+    </style>
+</head>
+
+<body ng-app="appModule" ng-controller="appController">
+
+    <div ng-include="tableView"></div>
+
+    <script src="/static/lib/angular/angular.js"></script>
+    <script src="/static/lib/angular-ui-grid/ui-grid.js"></script>
+    <script src="/static/lib/angular-resource/angular-resource.js"></script>
+    <script src="/static/lib/highcharts/highcharts.js"></script>
+    <script src="/static/lib/highcharts-ng/dist/highcharts-ng.js"></script>
+    <script src="/static/script/appController.js"></script>
+    <script src="/static/script/checkbox_directive.js"></script>
+    <script src="/static/script/tableController.js"></script>
+    <script src="/static/script/utilsServices.js"></script>
+    <script src="/static/script/DateFormat.js"></script>
+    <script src="/static/script/fidConstant.js"></script>
+    <script src="/static/script/myGridAutoResize.js"></script>
+</body>
+</html>
