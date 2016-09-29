@@ -1,7 +1,9 @@
 <nav class="navbar navbar-default">
-    <div class="navbar-header">
-        <span class="navbar-brand" href="#">Monitor</span>
-    </div>
+    <ul class="nav navbar-nav">
+        <li><span class="navbar-brand" href="#">Monitor</span></li>
+        <li><span class="navbar-brand" href="#">添加Api</span></li>
+        <li><span class="navbar-brand" href="#">添加用户/权限</span></li>
+    </ul>
     <div class="container-fluid">
         <ul class="nav navbar-nav navbar-right" ng-cloak>
             <li><a href="#" class="ng-cloak">{{input_username}}</a></li>
@@ -12,10 +14,13 @@
 
 <div ng-controller="tableController">
     <div>
-        <p class="ss-text-lg ss-text-danger ss-text-center">Realtime API Operation</p>
+        <div uib-tooltip="{{exceptionName}}" tooltip-trigger="none" tooltip-class=""  tooltip-is-open="websocketDisconnecttooltip" tooltip-placement="top">
+            <p class="ss-text-lg ss-text-danger ss-text-center">Realtime API Operation</p>
+        </div>
         <div class="grid" ui-grid="monitorTable.gridOptions" ui-grid-selection ui-grid-pagination
-             my-ui-grid-auto-resize></div>
+             my-ui-grid-auto-resize ui-grid-resize-columns></div>
     </div>
+    
     <div>
         <div class="">
             <highchart id="apiOperationDetail" config="apiOperationChart"></highchart>
@@ -27,11 +32,17 @@
         </div>
     </div>
 
-    <div>
-        <p></p>
-        <p class="ss-text-lg ss-text-danger ss-text-center">heartbeat</p>
-        <div class="grid" ui-grid="heartbeatData.gridOptions" ui-grid-selection ui-grid-pagination
-             my-ui-grid-auto-resize></div>
+    <div class="div-bottom">
+    	<p></p>
+    	<p class="ss-text-lg ss-text-danger ss-text-center">Api List</p>
+    	<div class="grid" ui-grid="apiDataTable.gridOptions" ui-grid-selection ui-grid-pagination ui-grid-edit  ui-grid-resize-columns my-ui-grid-auto-resize></div>
+        <br />
+        <ul class="pager">
+        	<li><button class="ss-btn-info ss-btn-lg" type="button" ng-disabled="addnewapiFlag" ng-click="addApiData()">新增API</button></li>
+        </ul>
+        <div class="editApi-error ss-text-danger" ng-click="editApiErrorTip()" ng-show="editApiErrorFlag">{{editApiError}}</div>
+        
     </div>
+    
 </div>
 

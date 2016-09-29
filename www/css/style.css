@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0;
     padding: 0;
 }
@@ -9,13 +9,12 @@ body{
     padding-bottom: 30px;
     border-radius: 8px;
     position: absolute;
-    left:50%;
+    left: 50%;
     margin-left: -200px;
 
     top: -400px;
     -webkit-transform: translateY(800px);
     -webkit-transition: transform .5s;
-
 
 }
 
@@ -24,48 +23,51 @@ body{
     line-height: 0px;
     font-size: 14px;
     font-weight: bold;
-    font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
     filter: dropshadow(color=#fff, offx=0, offy=1);
-    border-bottom: 2px solid rgba(0,0,0,.7);
+    border-bottom: 2px solid rgba(0, 0, 0, .7);
     padding-left: 20px;
 
 }
-.login-inform{
+
+.login-inform {
     margin-top: 20px;
     margin-right: 15px;
     margin-bottom: 25px;
     text-align: center;
 }
-p+p{
+
+p + p {
     margin-top: 20px;
 }
-input[type="text"], input[type="password"]{
+
+input[type="text"], input[type="password"] {
     height: 33px;
     padding: 0 10px 0 10px;
     margin: 0 auto;
-    color: rgba(0,0,0,0.9);
+    color: rgba(0, 0, 0, 0.9);
     border: 1px solid #bec2c4;
     margin-right: 10px;
 }
 
-input[type="text"]:focus, input[type="password"]:focus{
-    border:1px solid #7dc6dd;
+input[type="text"]:focus, input[type="password"]:focus {
+    border: 1px solid #7dc6dd;
 }
-
+/*
 button {
     cursor: pointer;
     outline: none;
     color: white;
     background: royalblue;
-    width:72px;
-    height:30px;
+    width: 72px;
+    height: 30px;
     line-height: 30px;
-    border:0px;
+    border: 0px;
     margin-left: 40px;
     border-radius: 5px;
-}
+}*/
 
-input[type="checkbox"]{
+input[type="checkbox"] {
     vertical-align: middle;
     margin-bottom: 5px;
     margin-right: 3px;
@@ -74,19 +76,21 @@ input[type="checkbox"]{
 label span {
     color: #555555;
 }
-.login_checked{
+
+.login_checked {
     margin-left: 100px;
 }
 
 .div-grid {
-    width:47%;
+    width: 47%;
     float: left;
     padding-left: 2%;
 }
 
-.grid{
+.grid {
     width: auto;
 }
+
 .inline {
     display: inline-block;
     width: 100%;
@@ -103,9 +107,8 @@ label span {
 .pager li > a,
 .pager li > span {
     background: #0d7b7b;
-    color:#ffebc8;
+    color: #ffebc8;
 }
-
 
 .pager li > a:hover,
 .pager li > a:focus {
@@ -114,4 +117,35 @@ label span {
 
 .pager li > a:active {
     background: #0d6060;
+}
+
+.editApi-error {
+    height: 28%;
+    width: 40%;
+    position: fixed;
+    top: 30%;
+    left: 32%;
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 2px;
+    text-align: center;
+    padding-top: 130px;
+}
+
+.tooltip-inner {
+    min-width: 200px;
+    color: #fff;
+    background-color: red;
+}
+
+.tooltip.top .tooltip-arrow {
+    border-top-color: red;
+}
+
+.dspn {
+    display: none;
+}
+
+.div-bottom {
+    margin-bottom: 100px;
 }

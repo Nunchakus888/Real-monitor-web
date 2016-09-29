@@ -156,12 +156,175 @@ class: simpledirective.inputs.checkbox
     }
 
 /********************************************************************************
+class: simpledirective.datepicker
+********************************************************************************/
+
+.ss-datepicker * {
+  font-family: microsoft yahei;
+  box-sizing: border-box;
+}
+.ss-datepicker .ss-datepickerRect {
+  display: inline-block;
+}
+.ss-datepicker .input {
+  cursor: default;
+}
+.ss-datepicker .inputable {
+  cursor: text;
+  z-index: 101;
+  position: relative;
+}
+.ss-datepicker .defaultDatePickerInput {
+  width: 90px;
+  height: 22px;
+  line-height: 22px;
+  cursor: default;
+  border: #697277 1px solid;
+  border-radius: 2px;
+  background-color: #42494e;
+  color: #f0f0f0;
+  text-align: center;
+}
+.ss-datepicker .globalCover {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 99;
+}
+.ss-datepicker .ss-datepicker {
+  position: absolute;
+  z-index: 100;
+  width: 220px;
+  min-height: 217px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.7);
+  background-color: #232628;
+}
+.ss-datepicker .ss-datepicker .pickerHeader1 {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.ss-datepicker .ss-datepicker .pickerHeader2 {
+  width: 100%;
+  height: 28px;
+  clear: both;
+}
+.ss-datepicker .ss-datepicker .pickerHeader2 * {
+  cursor: default;
+}
+.ss-datepicker .ss-datepicker .pickerHeader2 .days {
+  width: 30px;
+  text-align: center;
+  line-height: 26px;
+  color: #959b9f;
+  display: inline-block;
+  font-size: 12px;
+  margin-top: 1px;
+  margin-right: 1px;
+}
+.ss-datepicker .ss-datepicker .pickerHeader2 .days:nth-child(1) {
+  margin-left: 1px;
+}
+.ss-datepicker .ss-datepicker .headBox1 {
+  width: 70px;
+  height: 24px;
+  background-color: #3b4145;
+  border-radius: 2px;
+  float: left;
+}
+.ss-datepicker .ss-datepicker .headBox1 input {
+  width: 38px;
+  height: 18px;
+  margin-top: 3px;
+  margin-left: 8px;
+  border: none;
+  background-color: transparent;
+  float: left;
+  font-size: 14px;
+  color: #ffda9a;
+}
+.ss-datepicker .ss-datepicker .ml_5 {
+  margin-left: 5px;
+}
+.ss-datepicker .ss-datepicker .ml_15 {
+  margin-left: 15px;
+}
+.ss-datepicker .ss-datepicker .headerLabel {
+  float: left;
+  margin-left: 5px;
+  margin-top: 3px;
+  font-size: 12px;
+  color: #959b9f;
+  cursor: default;
+}
+.ss-datepicker .ss-datepicker dl {
+  width: 15px;
+  height: 20px;
+  margin: 2px 0 0 4px;
+  display: inline-block;
+  float: left;
+}
+.ss-datepicker .ss-datepicker dl * {
+  margin: 0;
+}
+.ss-datepicker .ss-datepicker dl .datepicker_arrow {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAOCAYAAAAWo42rAAAAAXNSR0IArs4c6QAAAJRJREFUKBVjYEAC////Z/v/69NMMAaykaQQzP//v0r+//3p2P9fH/+DMYgNFEOoALKACiyB+BkQ//z/63MaGIPYEDFLsGKsglg0M0GNPs7AwmzMyMp3HMpnALOBYkA+XAwmN2hpqK/3Y4QZ0MXQsN0PUgPztRXDn79nQeEJ8xGYDRQD8q1gYsQFOEw1UVGIUIw7UQAAg+W95ZWtROYAAAAASUVORK5CYII=);
+}
+.ss-datepicker .ss-datepicker dl dd.plus {
+  width: 100%;
+  height: 50%;
+  background-repeat: no-repeat;
+  background-position: center 3px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+.ss-datepicker .ss-datepicker dl dd.plus:hover {
+  background-color: #161819;
+}
+.ss-datepicker .ss-datepicker dl dd.reduce {
+  width: 100%;
+  height: 50%;
+  background-repeat: no-repeat;
+  background-position: center -7px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.ss-datepicker .ss-datepicker dl dd.reduce:hover {
+  background-color: #161819;
+}
+.ss-datepicker .ss-datepicker .dateCellRect .dateCell {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  display: inline-block;
+  margin-right: 1px;
+  margin-bottom: 1px;
+  font-size: 12px;
+  color: #ffebc8;
+  background-color: #1e2022;
+  cursor: default;
+}
+.ss-datepicker .ss-datepicker .dateCellRect .dateCellOn {
+  background-color: #161819;
+}
+.ss-datepicker .ss-datepicker .dateCellRect .dateCellOn:hover {
+  background-color: #1d4243;
+}
+.ss-datepicker .ss-datepicker .dateCellRect .dateWeekend {
+  color: #f9c66e;
+}
+/********************************************************************************
 class: basecss.Button
 updated on 2016/08/24 By Wei Lai
 ********************************************************************************/
 
 .ss-icon {
-    /*display: block;*/
+    display: block;
     border-radius: 2px;
     background-image: url("./image/icons.png");
     background-repeat: no-repeat;
@@ -385,6 +548,171 @@ class: basecss.List
 .ss-list-group.ss-back-style .ss-list-item:nth-child(even) {
     background-color: #232628;
 }
+.ss-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 10px;
+    z-index: 1050;
+    overflow: auto;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+}
+
+.ss-modal-dialog {
+    width: 400px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+
+.ss-modal-content {
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.70);
+    cursor: move;
+    position: relative;
+    background: #232628;
+    background-clip: padding-box;
+    border: 1px solid #999;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 6px;
+    outline: none;
+    min-height: 217px;
+    top: 0;
+    left: 0;
+}
+
+.ss-modal-header {
+    background: #0d7b7b;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 2px 2px 0px 0px;
+    height: 28px;
+    color: #ffebc8;
+    box-sizing: border-box;
+    padding-left: 13px;
+}
+
+    .ss-modal-header .close {
+        margin-top: -2px;
+    }
+
+.ss-modal .ss-modal-title {
+    margin: 0;
+    line-height: 28px;
+}
+
+.ss-modal-body {
+    /*	display: table;*/
+    color: #fff;
+    position: relative;
+    margin: 30px 40px 40px 40px;
+    box-sizing: border-box;
+    height: 59px;
+    max-width: 316px;
+}
+
+.ss-modal-footer {
+    text-align: center;
+}
+
+    .ss-modal-footer .btn + .btn {
+        margin-bottom: 0;
+        margin-left: 5px;
+    }
+
+.close:hover,
+.close:focus {
+    color: #FFEBC8;
+    text-decoration: none;
+    cursor: pointer;
+    filter: alpha(opacity=50);
+    opacity: .5;
+}
+
+button.close {
+    -webkit-appearance: none;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    float: right;
+    font-size: 21px;
+    line-height: 28px;
+    color: #FFEBC8;
+    text-shadow: 0 1px 0 #FFEBC8;
+}
+
+.ss-modal-body .ss-modal-body-content {
+    display: table;
+    height: 59px;
+}
+
+.ss-modal-body .icon {
+    display: table-cell;
+    vertical-align: middle;
+    width: 35px;
+    height: 59px;
+}
+
+.ss-modal-body .icon_warn {
+    display: inline-block;
+    height: 58px;
+    width: 32px;
+    background-image: url(../img/icon_warn.png);
+    background-repeat: no-repeat;
+    background-position-y: center;
+}
+
+.ss-modal-body .text {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.ss-modal-body .icon .icon_error {
+    height: 58px;
+    width: 32px;
+    background-image: url(../../img/icon_error.png);
+    background-repeat: no-repeat;
+    background-position-y: center;
+}
+
+.ss-modal-body .icon .icon_inquiry {
+    height: 58px;
+    width: 32px;
+    background-image: url(../../img/icon_inquiry.png);
+    background-repeat: no-repeat;
+    background-position-y: center;
+}
+
+.ss-modal-body .icon .icon_success {
+    height: 58px;
+    width: 32px;
+    background-image: url(../../img/icon_success.png);
+    background-repeat: no-repeat;
+    background-position-y: center;
+}
+
+.ss-modal-footer .btn {
+    color: #ffebc8;
+    line-height: 14px;
+    background: #0d7b7b;
+    border-radius: 2px;
+    width: 70px;
+    height: 24px;
+    border: none;
+    margin-bottom: 30px;
+}
+
+    .ss-modal-footer .btn:hover {
+        background: #006666;
+    }
+
 /********************************************************************************
 class: basecss.Panel
 ********************************************************************************/
@@ -477,6 +805,7 @@ class: basecss.Text
 ********************************************************************************/
 
 input, textarea, keygen, select, button,
+h1, h2, h3, h4, h5, h6,
 .body-font-family {
     font-family: MicrosoftYaHei;
 }

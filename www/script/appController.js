@@ -1,7 +1,6 @@
 'use strict';
 
-angular.module('appModule', ['avalon.ui', 'ui.grid', 'ui.grid.pagination', 'ui.grid.selection', 'highcharts-ng', 'my.ui.grid.autoResize', 'ngResource'])
-
+angular.module('appModule', ['avalon.ui', 'ui.grid', 'ui.grid.edit', 'ui.grid.resizeColumns', 'ui.grid.pagination', 'ui.grid.selection', 'highcharts-ng', 'my.ui.grid.autoResize', 'ngResource', 'ui.bootstrap'])
 .controller('appController', ['$scope', 'dataFactory', function ($scope, dataFactory) {
 
     $scope.login = function (username, password) {
@@ -41,6 +40,7 @@ angular.module('appModule', ['avalon.ui', 'ui.grid', 'ui.grid.pagination', 'ui.g
         })
         .catch(function (err) {
             console.log(err);
+            return false;
         });
     };
 
